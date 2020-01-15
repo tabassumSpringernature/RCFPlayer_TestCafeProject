@@ -1,0 +1,2519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Contents/bootstrap-sortable.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/bootstrap-sortable.js"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/moment.min.js"></script>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+
+      .thumbImg {
+        width: 100%;
+        max-width: 35px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        border-width: 1px;
+        border-color: #f1f1f1;
+        border-style: solid;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.7);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      .closeModal {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .closeModal:hover,
+      .closeModal:focus {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <span class="closeModal">&times;</span>
+      <img class="modal-content" id="modelImage">
+    </div>
+    <div class="container">
+
+      <h1 class="text-primary">TestCafe Test Summary</h1>
+      <br>
+      <div class="client-logo" style="padding:15px"></div>
+      <div class="bg-primary" style="padding:15px">
+        <h3>Summary</h3><br>
+        <p class="lead">Start Time: Mon Dec 16 2019 13:41:19 GMT+0000 (GMT)</p>
+        <p class="lead">Browsers: HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</p>
+        <p class="lead">Duration: 6m 28s</p>
+        <p class="lead">Tests Failed: 0 out of 300</p>
+        <p class="lead">Tests Skipped: 0</p>
+      </div><br>
+      <table class="table sortable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Fixture</th>
+            <th>Test Name</th>
+            <th>Browsers</th>
+            <th>Duration</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr class="success">
+  <td>1</td>
+  <td>Audio Activity</td>
+  <td>verify audioFiles on click to reset button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>2</td>
+  <td>Answer Key Homework Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>3</td>
+  <td>Answer Key Homework Student, single activity set</td>
+  <td>initial buttons state: shown buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>4</td>
+  <td>Answer Key Homework Student, single activity set</td>
+  <td>initial buttons state: enabled buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>5</td>
+  <td>Answer Key Homework Student, single activity set</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>6</td>
+  <td>Answer Key Homework Student, single activity set</td>
+  <td>verify showAnswers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>7</td>
+  <td>Answer Key Hotspot Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>8</td>
+  <td>Answer Key Hotspot Student, single activity set</td>
+  <td>initial buttons state: shown buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>9</td>
+  <td>Answer Key Hotspot Student, single activity set</td>
+  <td>initial buttons state: enabled buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>10</td>
+  <td>Answer Key Hotspot Student, single activity set</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>11</td>
+  <td>Answer Key Hotspot Student, single activity set</td>
+  <td>verify showAnswers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>12</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>13</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify buttons on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>14</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify show answers text is present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>15</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>16</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>17</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify showAll button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>18</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify reset button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>19</td>
+  <td>Answer Key Homework Teacher, single activity set in playlist</td>
+  <td>verify showOneByOne</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>20</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>21</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify buttons on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>22</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify show answers text is present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>23</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>24</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>25</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify showAll button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>26</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify reset button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>27</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify showOneByOne</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>28</td>
+  <td>Closed Gradable Gradebook Student, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>29</td>
+  <td>Closed Gradable Gradebook Teacher, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>30</td>
+  <td>Closed Gradable Hotspot-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all wrong answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>31</td>
+  <td>Closed Gradable Hotspot-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all correct answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>15s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>32</td>
+  <td>Closed Gradable Hotspot-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all wrong answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>33</td>
+  <td>Closed Gradable Hotspot-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all correct answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>34</td>
+  <td>Closed Gradable Homework-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all wrong answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>35</td>
+  <td>Closed Gradable Homework-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all correct answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>36</td>
+  <td>Closed Gradable Homework-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all wrong answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>37</td>
+  <td>Closed Gradable Homework-to-Gradebook Student, single activity set</td>
+  <td>Gradable students: all correct answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>38</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>39</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>initial buttons state: shown buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>40</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>initial buttons state: hidden buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>41</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>initial buttons state: enabled buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>42</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>check answers clicked: less than 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>43</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>check answers clicked: 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>44</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>try again clicked</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>45</td>
+  <td>Closed Gradable Homework Student, single activity set</td>
+  <td>verify showAnswersButton after 3rd attempt by student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>46</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>47</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>initial buttons state: shown buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>48</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>initial buttons state: hidden buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>49</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>initial buttons state: enabled buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>50</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>check answers clicked: less than 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>51</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>check answers clicked: 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>52</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>try again clicked</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>53</td>
+  <td>Closed Gradable Hotspot Student, single activity set</td>
+  <td>verify showAnswersButton after 3rd attempt by student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>54</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>55</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify buttons on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>56</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify show answers text is present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>57</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>58</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>59</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify showAll button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>60</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify reset button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>61</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>verify showOneByOneButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>62</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>check answers clicked: less than 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>63</td>
+  <td>Closed Gradable Homework Teacher, single activity set in playlist</td>
+  <td>check answers clicked: 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>64</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>65</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>verify show answers text is present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>66</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>67</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>initial buttons state: shown buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>68</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>initial buttons state: hidden buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>69</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>initial buttons state: enabled buttons</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>70</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>check answers clicked: less than 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>71</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>check answers clicked: 100%</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>72</td>
+  <td>Closed Gradable Hotspot Teacher, single activity set</td>
+  <td>one by one clicked</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>73</td>
+  <td>Homepage</td>
+  <td>activity set links shown</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>74</td>
+  <td>Homepage</td>
+  <td>clicking on activity set link opens rcf player</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>75</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>76</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>77</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>78</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>Student Role: verify check answers flow when all lives are lost</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>79</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>Student Role: verify check answers flow when no life is lost</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>30s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>80</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>Student Role: when activity ends with 01 life left</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>29s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>81</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>Student Role: when activity ends with 02 life left</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>29s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>82</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>27s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>83</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>24s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>84</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>21s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>85</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>Student Role: verify check answers flow when all lives are lost</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>21s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>86</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>Student Role: verify check answers flow when no life is lost</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>28s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>87</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>Student Role: when activity ends with 01 life left</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>24s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>88</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>Student Role: when activity ends with 02 life left</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>25s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>89</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify: activities are randomly displayed; score screen; no next button on last activity item</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>25s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>90</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>22s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>91</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>21s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>92</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>18s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>93</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify show answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>94</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify: activities are randomly displayed; score screen; no next button on last activity item</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>95</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>96</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>97</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>98</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>99</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>100</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>101</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>102</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>103</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>104</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>105</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>106</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>107</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>108</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>109</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>110</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>111</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>112</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>113</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>114</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>115</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>116</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>117</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>118</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>119</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>120</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>121</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>122</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>123</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>124</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>125</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>126</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>127</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>128</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>129</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>130</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>131</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>132</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>133</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>134</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>135</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>136</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>29s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>137</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>28s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>138</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>26s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>139</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>26s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>140</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>26s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>141</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify itemBasedBackButton</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>25s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>142</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify scoreScreen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>22s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>143</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>22s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>144</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>teacher options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>21s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>145</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>teacher option : show answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>20s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>146</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>20s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>147</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>18s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>148</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>17s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>149</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>16s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>150</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>verify score screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>16s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>151</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>Student Role: verify check answers flow with wrong answer, wrong answer gets qued at the end to be recycled</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>152</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>Student Role: verify check answers flow with correct answer</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>153</td>
+  <td>Item Based Practice Mode Homework Student, single activity set</td>
+  <td>Student Role: verify show answers for students</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>22s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>154</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>17s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>155</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>17s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>156</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>16s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>157</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>15s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>158</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>verify score screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>159</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>Student Role: verify check answers flow with wrong answer, wrong answer gets qued at the end to be recycled</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>160</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>Student Role: verify check answers flow with correct answer</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>161</td>
+  <td>Item Based Practice Mode Hotspot Student, single activity set</td>
+  <td>Student Role: verify show answers for students</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>23s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>162</td>
+  <td>Item Based Practice Mode Hotspot Teacher, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>16s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>163</td>
+  <td>Item Based Practice Mode Hotspot Teacher, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>16s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>164</td>
+  <td>Item Based Practice Mode Hotspot Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>165</td>
+  <td>Item Based Practice Mode Hotspot Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>166</td>
+  <td>Item Based Practice Mode Hotspot Teacher, single activity set</td>
+  <td>verify score screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>167</td>
+  <td>Item Based Practice Mode Hotspot Teacher, single activity set</td>
+  <td>Teacher Role: verify check answers flow for teachers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>168</td>
+  <td>Item Based Practice Mode Hotspot Teacher, single activity set</td>
+  <td>Teacher Role: verify show answers for teachers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>169</td>
+  <td>ItemBased Gradebook Student, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>170</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>171</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>hotspot,Homework to Gradebook: open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>172</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>hotspot,Homework to Gradebook: open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>173</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>hotspot,Homework to Gradebook: open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>174</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>hotspot,Homework to Gradebook: open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>175</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>verify score screen on retries</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>176</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>177</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>teacher option: shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>178</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>teacher option: showAnswers, checkAnswers buttons remains disabled on click</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>179</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>180</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>done button sends playlist completion event</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>15s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>181</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>182</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>183</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify show answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>184</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify at a time only one progressbar is active</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>185</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>186</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>187</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>student options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>188</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>student options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>189</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify activity is set to run in student mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>190</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>191</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>192</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>student options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>193</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>student options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>194</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify activity is set to run in student mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>195</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>196</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>197</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>student options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>198</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>student options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>199</td>
+  <td>Item Based Challenge Mode Homework Student, single activity set</td>
+  <td>verify activity is set to run in student mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>200</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify itembased cover screen</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>201</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>202</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>student options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>203</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>student options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>204</td>
+  <td>Item Based Challenge Mode Hotspot Student, single activity set</td>
+  <td>verify activity is set to run in student mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>205</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>verify activity is set to run in teacher mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>206</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>teacher options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>207</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>teacher options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>208</td>
+  <td>Item Based Test Mode Homework Teacher, single activity set</td>
+  <td>teacher option : show answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>209</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify activity is set to run in teacher mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>210</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>teacher options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>211</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>teacher options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>212</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>teacher option : show answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>213</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>teacher option non-review mode: check answers should not be present once answers are checked</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>214</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>teacher option non-review mode: itembased Next button is not shown until question is answered</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>215</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>verify activity is set to run in teacher mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>216</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>teacher options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>217</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>teacher options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>218</td>
+  <td>Item Based Challenge Mode Homework Teacher, single activity set</td>
+  <td>teacher option : show answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>219</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>verify activity is set to run in teacher mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>220</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>teacher options : shown after start</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>221</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>teacher options : shown after check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>222</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>teacher option : show answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>223</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>teacher option non-review mode: check answers should not be present once answers are checked</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>224</td>
+  <td>Item Based Challenge Mode Hotspot Teacher, single activity set</td>
+  <td>teacher option non-review mode: itembased Next button is not shown until question is answered</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>225</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>226</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>227</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>228</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>229</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>verify activities are sequentially displayed; score screen; no next button on last activity item</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>230</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>Student Role: verify check answers flow with wrong answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>231</td>
+  <td>Item Based Test Mode Homework Student, single activity set</td>
+  <td>Student Role: verify check answers flow with correct answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>13s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>232</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>233</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>234</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>235</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>236</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>verify activities are sequentially displayed; score screen; no next button on last activity item</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>237</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>Student Role: verify check answers flow with wrong answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>238</td>
+  <td>Item Based Test Mode Hotspot Student, single activity set</td>
+  <td>Student Role: verify check answers flow with correct answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>239</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify itembased mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>240</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify cover screen do not show pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>241</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>start with the activity set</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>242</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify check answers</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>243</td>
+  <td>Item Based Test Mode Hotspot Teacher, single activity set</td>
+  <td>verify activities are sequentially displayed; score screen; no next button on last activity item</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>244</td>
+  <td>ItemBased Gradebook Student, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>245</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>246</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>15s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>247</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>15s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>248</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>15s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>249</td>
+  <td>ItemBased Gradebook Teacher, single activity set</td>
+  <td>open student answered activity in Gradebbok role: teacher and student</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>16s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>250</td>
+  <td>Non Gradable Homework Student</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>251</td>
+  <td>Non Gradable Homework Student</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>10s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>252</td>
+  <td>Non Gradable Homework Student</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>253</td>
+  <td>Non Gradable Hotspot Student</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>254</td>
+  <td>Non Gradable Hotspot Student</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>8s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>255</td>
+  <td>Non Gradable Hotspot Student</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>256</td>
+  <td>Non Gradable Hotspot Teacher</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>257</td>
+  <td>Non Gradable Hotspot Teacher</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>258</td>
+  <td>Non Gradable Hotspot Teacher</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>259</td>
+  <td>Non Gradable Homework Teacher</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>260</td>
+  <td>Non Gradable Homework Teacher</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>261</td>
+  <td>Non Gradable Homework Teacher</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>262</td>
+  <td>Open Gradable Gradebook Student, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>263</td>
+  <td>Open Gradable Gradebook Teacher, single activity set</td>
+  <td>no attempt: activity has not been attempted, no player controls present</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>264</td>
+  <td>Open Gradable Hotspot-to-Gradebook Student, single activity set</td>
+  <td>Open Gradable Students Role checks: writing activity</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>265</td>
+  <td>Open Gradable Hotspot-to-Gradebook Student, single activity set</td>
+  <td>Open Gradable Teacher Role checks: writing activity</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>20s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>266</td>
+  <td>Open Gradable Homework-to-Gradebook Student, single activity set</td>
+  <td>Open Gradable Students Role checks: writing activity</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>20s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>267</td>
+  <td>Open Gradable Homework-to-Gradebook Student, single activity set</td>
+  <td>Open Gradable Teacher Role checks: writing activity</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>22s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>268</td>
+  <td>Open Gradable Homework-to-Gradebook Student, single activity set</td>
+  <td>Open Gradable Students Role : verify TryAgain</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>57s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>269</td>
+  <td>Open Gradable Homework Student</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>51s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>270</td>
+  <td>Open Gradable Homework Student</td>
+  <td>initial buttons state</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>46s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>271</td>
+  <td>Open Gradable Homework Student</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>46s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>272</td>
+  <td>Open Gradable Homework Student</td>
+  <td>verify submit</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>43s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>273</td>
+  <td>Open Gradable Hotspot Student</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>42s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>274</td>
+  <td>Open Gradable Hotspot Student</td>
+  <td>initial buttons state</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>42s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>275</td>
+  <td>Open Gradable Hotspot Student</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>37s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>276</td>
+  <td>Open Gradable Hotspot Student</td>
+  <td>verify submit</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>37s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>277</td>
+  <td>Open Gradable Homework Teacher</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>36s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>278</td>
+  <td>Open Gradable Homework Teacher</td>
+  <td>initial buttons state</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>32s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>279</td>
+  <td>Open Gradable Homework Teacher</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>31s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>280</td>
+  <td>Open Gradable Homework Teacher</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>29s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>281</td>
+  <td>Open Gradable Homework Teacher</td>
+  <td>verify reset</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>29s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>282</td>
+  <td>Open Gradable Hotspot Teacher</td>
+  <td>verify template type</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>28s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>283</td>
+  <td>Open Gradable Hotspot Teacher</td>
+  <td>initial buttons state</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>25s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>284</td>
+  <td>Open Gradable Hotspot Teacher</td>
+  <td>verify no other buttons appear on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>24s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>285</td>
+  <td>Open Gradable Hotspot Teacher</td>
+  <td>verify components on activity load</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>23s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>286</td>
+  <td>Open Gradable Hotspot Teacher</td>
+  <td>verify reset</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>21s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>287</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist</td>
+  <td>verify activityTitle</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>20s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>288</td>
+  <td>Playlist In Homework-Teacher</td>
+  <td>Verify playlist start button and playlist end button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>20s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>289</td>
+  <td>Playlist In Homework-Teacher</td>
+  <td>Verify playlist navigation buttons and pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>19s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>290</td>
+  <td>Playlist In Hotspot-Teacher</td>
+  <td>Verify playlist start button and playlist end button</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>17s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>291</td>
+  <td>Playlist In Hotspot-Teacher</td>
+  <td>Verify playlist navigation buttons and pagination</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>14s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>292</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, windowed</td>
+  <td>player starts in windowed mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>293</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, windowed</td>
+  <td>clicking window toggle switches to maximized mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>11s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>294</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, windowed</td>
+  <td>clicking window toggle again switches back to windowed mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>295</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, maximized</td>
+  <td>player starts in maximized mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>296</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, maximized</td>
+  <td>clicking window toggle switches to windowed mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>297</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, maximized</td>
+  <td>clicking window toggle again switches back to maximized mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>298</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, full-screen</td>
+  <td>player starts in full-screen mode</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>299</td>
+  <td>Answer Key Hotspot Teacher, single activity set in playlist, full-screen</td>
+  <td>activity set navigation close button shown</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>300</td>
+  <td>RcfPlayerDebugView</td>
+  <td>manifest content for activity set shown</td>
+  <td>HeadlessChrome 78.0.3904 / Mac OS X 10.12.6</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+
+        </tbody>
+      </table>
+      <br><br>
+      
+      <h3>Error Details</h3>
+      <br>
+      
+    </div>
+    <script>
+      const modal = document.getElementById('myModal');
+      const modalImage = document.getElementById("modelImage");
+
+      Array.from(document.getElementsByClassName("thumbImg")).forEach(function(el) {
+        el.onclick = function() {
+          modal.style.display = "block";
+          modalImage.src = this.src;
+        }
+      });
+      
+      document.getElementsByClassName("closeModal")[0].onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

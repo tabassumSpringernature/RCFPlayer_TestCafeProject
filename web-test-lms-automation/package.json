@@ -1,0 +1,24 @@
+{
+  "name": "@rcf/web-test-lms-automation",
+  "version": "0.4.12",
+  "private": true,
+  "dependencies": {
+    "@rcf/universal-library-rcf-player": "*",
+    "@rcf/universal-library-test-rcf-adapter": "*",
+    "node-fetch": "2.3.0",
+    "shortid": "2.2.14",
+    "testcafe": "1.5.0",
+    "testcafe-browser-provider-browserstack": "1.9.0",
+    "testcafe-reporter-html": "1.4.4"
+  },
+  "scripts": {
+    "testcafe": "testcafe -e",
+    "test": "yarn testcafe \"chrome --autoplay-policy=no-user-gesture-required --incognito\" ./src/features/ -q --reporter spec,html:./report/report.html --screenshots report/screenshots -c 5",
+    "test:headless": "yarn testcafe \"chrome:headless --autoplay-policy=no-user-gesture-required --incognito\" ./src/features/ -c 5 --reporter spec,html:./report/report.html --screenshots report/screenshots",
+    "test:browserstack": "yarn testcafe \"browserstack:Chrome\" ./src/features",
+    "test:report": "yarn testcafe \"chrome --autoplay-policy=no-user-gesture-required --incognito\" ./src/features --reporter spec,html:./report/report.html",
+    "test:report-headless": "yarn testcafe \"chrome:headless --autoplay-policy=no-user-gesture-required --incognito\" ./src/features/ -c 5 --reporter spec,html:./report/report.html",
+    "test:report-screenshots": "yarn testcafe \"chrome --autoplay-policy=no-user-gesture-required --incognito\" ./src/features/ --reporter spec,html:./report/report.html --screenshots report/screenshots"
+  },
+  "devDependencies": {}
+}
