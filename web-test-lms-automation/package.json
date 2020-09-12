@@ -5,7 +5,7 @@
   "dependencies": {
     "@rcf/universal-library-rcf-player": "*",
     "@rcf/universal-library-test-rcf-adapter": "*",
-    "node-fetch": "2.3.0",
+    "node-fetch": "2.6.1",
     "shortid": "2.2.14",
     "testcafe": "1.5.0",
     "testcafe-browser-provider-browserstack": "1.9.0",
